@@ -1,0 +1,133 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Webtaku: About</title>
+
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <script type="text/javascript" src="includes/modernizr.js"></script>
+  <script type="text/javascript" src="includes/jquery-1.6.1.min.js"></script>
+  <script type="text/javascript" src="includes/chart.js"></script>
+</head>
+
+<body>
+	<header>
+		<canvas id="Canvas1" width="350" height="150">Your browser does not support canvas.</canvas>
+		<script>
+		  var canvas = document.getElementById('Canvas1');
+		  var context = canvas.getContext('2d');
+		  var centerX = canvas.width / 2;
+		  var centerY = canvas.height / 2;
+		  var radius = 70;
+		  var eyeRadius = 10;
+		  var eyeXOffset = 25;
+		  var eyeYOffset = 20;
+
+		  context.beginPath();
+		  context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+		  context.fillStyle = "#F2E3DC";
+		  context.fill();
+		  context.lineWidth = 5;
+		  context.strokeStyle = "#000";
+		  context.stroke();
+		    
+		  context.beginPath();
+		  var eyeX = centerX - eyeXOffset;
+		  var eyeY = centerY - eyeXOffset;
+		  context.arc(eyeX, eyeY, eyeRadius, 0, 2 * Math.PI, false);
+		  var eyeX = centerX + eyeXOffset;
+		  context.arc(eyeX, eyeY, eyeRadius, 0, 2 * Math.PI, false);
+		  context.fillStyle = "#000";
+		  context.fill();
+		  
+		  context.beginPath();
+		  context.arc(centerX, centerY, 50, 0, Math.PI, false);
+		  context.stroke();
+		</script>
+		<h1>Webtaku</h1>
+		<h2>ジョン·スミスによって、ウェブはオタク設計します。</h2> <!-- By John Smith, the web design otaku. -->
+	</header>
+
+	<nav>
+		<ul>
+			<li>
+				<a href="index.html">Home</a>
+			</li>
+		    <li>
+		        <a href="about.html" id="active">About</a>
+		    </li>
+		    <li>
+		        <a href="portfolio.html">Portfolio</a>
+		    </li>
+		    <li>
+		    	<a href="contact.html">Contact</a>
+		    </li>
+		</ul>
+	</nav>
+
+	<section id="main">
+		<canvas id="Canvas2" width="320" height="75"></canvas>
+    	<script>
+	      var canvas = document.getElementById('Canvas2');
+	      var context = canvas.getContext('2d');
+	      var x = 0;
+	      var y = 50;
+
+	      context.font = '50pt Times';
+	      context.lineWidth = 1;
+	      context.strokeStyle = '#5B4753';
+	      context.strokeText('About Me!', x, y);
+    	</script>
+		<p>I am currently a student at Full Sail University in Florida, studying web design and development. Before Full Sail, however, I spent two years at the University of Hartford in Connecticut, where I studied the same thing. Unfortunately, the program they had running there wasn't exactly what I had hoped it'd be so I moved on from there with an Associate's degree in Liberal Arts.</p>
+
+		<p>I plan on getting much accomplished here at Full Sail before graduating. I want to develop and hone my skills in both web design and writing by practicing every day. Upon completion of my Web Design bachlors, I'd like to move on to a New Media Journalism master's degree.</p>
+
+		<p>I love anime, video games, movies and television and writing about those things when I'm not coding or doing schoolwork.</p><br>
+
+		<canvas id="Canvas3" width="335" height="75"></canvas>
+    	<script>
+	      var canvas = document.getElementById('Canvas3');
+	      var context = canvas.getContext('2d');
+	      var x = 0;
+	      var y = 50;
+
+	      context.font = '50pt Times';
+	      context.lineWidth = 1;
+	      context.strokeStyle = '#5B4753';
+	      context.strokeText('My Skillset!', x, y);
+    	</script>
+
+		<div class="chart-container">
+			<div class="chart-title">
+				<h2>My Web Design and Dev Skills</h2>
+				<p>What I'm most proficient at.</p>
+			</div>
+			<div class="chart-content">
+				<div class="chart-y-axis">
+					<p style="top:0px;">1000</p>
+					<p style="bottom:225px;">750</p>
+					<p style="bottom:150px;">500</p>
+					<p style="bottom:75px;">250</p>
+					<p style="bottom:0px;">0</p>
+				</div>
+				<div class="chart-area" bar-spacing="30">
+					<div bar-value="800" label="CSS3" class="chart-bar hoursewares"></div>
+					<div bar-value="500" label="JavaScript"   class="chart-bar shipping"></div>
+					<div bar-value="900" label="HTML5"   class="chart-bar clothing"></div>
+				</div>
+				<div class="chart-x-axis"></div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<h1>&copy; Webtaku 2015</h1>
+	</footer>
+
+
+</body>
+</html>

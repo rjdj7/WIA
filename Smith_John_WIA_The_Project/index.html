@@ -1,0 +1,125 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Webtaku: Home</title>	
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <script type="text/javascript" src="includes/modernizr.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+	<header>
+		<canvas id="Canvas1" width="350" height="150">Your browser does not support canvas.</canvas>
+		<script>
+		  var canvas = document.getElementById('Canvas1');
+		  var context = canvas.getContext('2d');
+		  var centerX = canvas.width / 2;
+		  var centerY = canvas.height / 2;
+		  var radius = 70;
+		  var eyeRadius = 10;
+		  var eyeXOffset = 25;
+		  var eyeYOffset = 20;
+
+		  context.beginPath();
+		  context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+		  context.fillStyle = "#F2E3DC";
+		  context.fill();
+		  context.lineWidth = 5;
+		  context.strokeStyle = "#000";
+		  context.stroke();
+		    
+		  context.beginPath();
+		  var eyeX = centerX - eyeXOffset;
+		  var eyeY = centerY - eyeXOffset;
+		  context.arc(eyeX, eyeY, eyeRadius, 0, 2 * Math.PI, false);
+		  var eyeX = centerX + eyeXOffset;
+		  context.arc(eyeX, eyeY, eyeRadius, 0, 2 * Math.PI, false);
+		  context.fillStyle = "#000";
+		  context.fill();
+		  
+		  context.beginPath();
+		  context.arc(centerX, centerY, 50, 0, Math.PI, false);
+		  context.stroke();
+		</script>
+		<h1>Webtaku</h1>
+		<h2>ジョン·スミスによって、ウェブはオタク設計します。</h2> <!-- By John Smith, the web design otaku. -->
+	</header>
+
+	<nav>
+		<ul>
+			<li>
+				<a href="index.html" id="active">Home</a>
+			</li>
+		    <li>
+		        <a href="about.html">About</a>
+		    </li>
+		    <li>
+		        <a href="portfolio.html">Portfolio</a>
+		    </li>
+		    <li>
+		    	<a href="contact.html">Contact</a>
+		    </li>
+		</ul>
+	</nav>
+
+	<section id="main">
+		<img src="images/me.jpg" />
+		<canvas id="Canvas2" width="320" height="75"></canvas>
+    	<script>
+	      var canvas = document.getElementById('Canvas2');
+	      var context = canvas.getContext('2d');
+	      var x = 0;
+	      var y = 50;
+
+	      context.font = '50pt Times';
+	      context.lineWidth = 1;
+	      context.strokeStyle = '#5B4753';
+	      context.strokeText('Welcome!', x, y);
+    	</script>
+		<h1>Welcome to my site. I'm John. Please, have a look around.</h1>
+		<p>I love web design and writing. Here you'll find my web design portfolio and some creative writing samples.</p>
+
+		<canvas id="Canvas1" width="350" height="150">Your browser does not support canvas.</canvas>
+		<script>
+		  var canvas = document.getElementById('Canvas1');
+		  var context = canvas.getContext('2d');
+		  var centerX = canvas.width / 2;
+		  var centerY = canvas.height / 2;
+		  var radius = 70;
+		  var eyeRadius = 10;
+		  var eyeXOffset = 25;
+		  var eyeYOffset = 20;
+		  
+		  context.beginPath();
+		  context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+		  context.fillStyle = "#F2E3DC";
+		  context.fill();
+		  context.lineWidth = 5;
+		  context.strokeStyle = 'black';
+		  context.stroke();
+		  
+		  context.beginPath();
+		  var eyeX = centerX - eyeXOffset;
+		  var eyeY = centerY - eyeXOffset;
+		  context.arc(eyeX, eyeY, eyeRadius, 0, 2 * Math.PI, false);
+		  var eyeX = centerX + eyeXOffset;
+		  context.arc(eyeX, eyeY, eyeRadius, 0, 2 * Math.PI, false);
+		  context.fillStyle = 'black';
+		  context.fill();
+		  
+		  context.beginPath();
+		  context.arc(centerX, centerY, 50, 0, Math.PI, false);
+		  context.stroke();
+		</script>
+	</section>
+
+	<footer>
+		<h1>&copy; Webtaku 2015</h1>
+	</footer>
+
+  <script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>
